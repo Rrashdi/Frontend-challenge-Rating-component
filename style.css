@@ -1,0 +1,131 @@
+:root{
+    --Orange: hsl(25, 97%, 53%);
+
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Medium-Grey: hsl(216, 12%, 54%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Overpass;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:var(--Very-Dark-Blue);
+    height: 100vh;
+    padding: 1.5rem;
+    gap: 2rem;
+}
+.rating{
+    display: grid;
+    background-image: linear-gradient(var(--Dark-Blue), hsl(213, 19%, 10%));
+    padding: 1.5rem;
+    gap: 1.5rem;
+    border-radius: 1rem;
+    color: var(--Medium-Grey);
+}
+.rating-img{
+    width: 2.5rem;
+    padding: .5rem;
+    background-color: hsl(213, 19%, 20%);
+    border-radius: 50%;
+    text-align: center;
+}
+.rating-img img{
+    transform-origin: center;
+    transform: translate(0, 2.5px);
+}
+ .text{
+    display: grid;
+    gap: 1rem;
+}
+.rating h1{
+    color: var(--White);
+    font-size: 1.5rem;
+}
+.text p{
+    line-height: 1.5;
+    font-size: .85rem;
+}
+.levels{
+    display: flex;
+    justify-content: space-between;
+}
+.levels button{
+    border: none;
+    width: 2.5rem;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    color: var(--Medium-Grey);
+    background-color: hsl(213, 19%, 20%);
+    cursor: pointer;
+}
+.levels button:hover, 
+.levels button:focus-visible{
+    background-color: var(--Light-Grey);
+    color: var(--White);
+}
+.levels button:active{
+    background-color: var(--Orange);
+}
+.submit{
+    background-color: var(--Orange);
+    border: none;
+    padding: 1rem;
+    border-radius: 40vw;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--White);
+    cursor: pointer;
+}
+.submit:hover,
+.submit:focus-visible{
+    background-color: var(--White);
+    color: var(--Orange);
+}
+.thanksCard{
+    place-items: center;
+    padding-block: 2rem;
+}
+.thanksCard .text{
+    text-align: center;
+}
+.thanksCard .text p{
+    font-size: .8rem;
+}
+.thanksCard .selected-p{
+    padding: .5rem;
+    background-color: hsl(213, 19%, 20%);
+    border-radius: 20vw;
+} 
+.selected-p p{
+    color: var(--Orange);
+}
+@media (min-width:450px){
+    .rating{
+        max-width: 25rem;
+    }
+    .thanksCard .text p{
+        font-size: 1rem;
+    }
+}
+.display-none{
+    display: none;
+}
+.attribution{
+    color: rgb(41, 40, 40);
+    text-align: center;
+}
+.attribution a{
+    color: rgb(90, 90, 17);
+    font-weight: normal;
+    text-decoration: none;
+    cursor: pointer;
+}
